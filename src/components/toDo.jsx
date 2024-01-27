@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import { v4 as uuid } from "uuid";
+import './toDo.css'
 
 const ToDo = () => {
   const [todos, setTodos] = useState([]);
@@ -32,7 +33,7 @@ const ToDo = () => {
       <h1>To Do List</h1>
       <form onSubmit={handleSubmit}>
         <input type="text" ref={value} />
-        <button>Add Todo</button>
+        <button className="addBtn">Add</button>
       </form>
       <ul>
         {todos.map((todo) => (
